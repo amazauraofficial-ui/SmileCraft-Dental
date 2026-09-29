@@ -1,0 +1,6 @@
+{
+  "name": "SmileCraft Dental",
+  "description": "SmileCraft Dental is a premium dental practice on Madison Avenue, New York, offering comprehensive general, cosmetic, dental implants, Invisalign, and emergency dentistry with exceptional, patient-centered care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

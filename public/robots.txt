@@ -1,0 +1,7 @@
+# Robots.txt for SmileCraft Dental
+User-agent: *
+Allow: /
+Disallow: /404
+
+# Sitemaps
+Sitemap: https://smilecraftdental.netlify.app/sitemap.xml

@@ -1,0 +1,46 @@
+# Netlify Production Configuration for SmileCraft Dental
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA Fallback: Route all non-asset paths to index.html with 200 status
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security and Privacy Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    # Balanced CSP allowing Google Fonts and self assets
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https:; frame-ancestors 'none';"
+
+# Cache Optimization for Immutable Build Assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache Policy for Dynamic Root HTML (Must revalidate to ensure immediate updates)
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Cache Policy for Crawlers & Static Verification Files
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

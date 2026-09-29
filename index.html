@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmileCraft Dental | Modern Dental Care in New York</title>
+    <meta name="description" content="SmileCraft Dental offers modern dentistry, dental implants, cosmetic dentistry, Invisalign, and emergency dental care on Madison Avenue, New York. Confident smiles, exceptional care." />
+    
+    <!-- Favicon & Touch Icon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="canonical" id="canonical-url" href="https://smilecraftdental.netlify.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SmileCraft Dental" />
+    <meta property="og:title" content="SmileCraft Dental | Modern Dental Care in New York" />
+    <meta property="og:description" content="Confident smiles, exceptional care. Premium general, cosmetic, implant, and orthodontic dentistry in New York." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://smilecraftdental.netlify.app/" />
+    <meta property="og:image" content="https://smilecraftdental.netlify.app/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SmileCraft Dental | Modern Dental Care in New York" />
+    <meta name="twitter:description" content="Modern dentistry, dental implants, Invisalign, and compassionate care on Madison Avenue, New York." />
+    <meta name="twitter:image" content="https://smilecraftdental.netlify.app/og-image.svg" />
+
+    <!-- Google Fonts: Plus Jakarta Sans & Newsreader -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- JSON-LD LocalBusiness / Dentist Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "SmileCraft Dental",
+      "image": "https://smilecraftdental.example/clinic.jpg",
+      "telephone": "+1-212-555-0188",
+      "email": "hello@smilecraftdental.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1250 Madison Avenue",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10028",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7828,
+        "longitude": -73.9575
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday"],
+          "opens": "08:00",
+          "closes": "16:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Credit Card, Insurance",
+      "currenciesAccepted": "USD"
+    }
+    </script>
+  </head>
+  <body class="bg-[#FCFDFF] text-slate-800 selection:bg-sky-100 selection:text-sky-900 font-sans min-h-screen">
+    <!-- Static Netlify Forms Discovery Templates for Build-Time Crawler -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="service" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="appointment-request" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="appointment-request" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="fullName" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="service" />
+      <input type="text" name="preferredDoctor" />
+      <input type="date" name="preferredDate" />
+      <input type="text" name="preferredTime" />
+      <input type="text" name="patientType" />
+      <textarea name="notes"></textarea>
+    </form>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
